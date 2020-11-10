@@ -1,0 +1,16 @@
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+body {
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", 微软雅黑,
+    tahoma, simsun, 宋体;
+  
+}
+a {
+  display: inline-block;
+  color: #999999;
+}

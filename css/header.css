@@ -1,0 +1,263 @@
+@charset "utf-8";
+#header .ad {
+  min-width: 1198px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  background-color: skyblue;
+  /*  图片居中 */
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+
+  display: none;
+}
+.nav {
+  min-width: 1198px;
+  height: 31px;
+  line-height: 31px;
+  background-color: #000000;
+  position: relative;
+  z-index: 11;
+}
+
+.center {
+  width: 1126px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+.nav-fl {
+  width: 371px;
+}
+
+.nav-fl ul li a,
+.nav-fr .group1 a {
+  float: left;
+  margin-right: 30px;
+}
+
+.group2 a {
+  float: left;
+  padding: 0 15px 0 12px;
+}
+
+.nav-fr {
+  box-sizing: border-box;
+  margin-left: 90px; /* 135-90 = 45px*/
+  width: 665px; /* 620px; */
+}
+
+.group1 {
+  width: 170px;
+}
+.group2 {
+  width: 493px;
+  padding-left: 2px;
+}
+
+.nav .nav-fl a:hover,
+.nav .nav-fr .group1 a:hover {
+  color: #fff;
+}
+
+/* 三角符号 */
+.arrow {
+  display: inline-block;
+  margin-left: 2px;
+  /* 对齐方式 */
+  vertical-align: text-top;
+
+  /* 三角形 */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #999;
+  /* 旋转 */
+  transform: rotate(90deg);
+}
+
+.user-model:hover {
+  height: 31px;
+  line-height: 31px;
+  color: #f00;
+  background-color: #ffff;
+}
+
+.user-model:hover span {
+  transform: rotate(270deg);
+  transition: all 0.3s ease-in;
+  transform-origin: center center;
+  /* 三角形 */
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #f00;
+}
+/*
+ 二级导航: 
+    原理： 通过对父级 li position: relative
+    二级导航: position: absolute
+    定义类名: 覆盖父级样式
+*/
+.group2 ul li {
+  position: relative;
+}
+
+/* 公共菜单 */
+.ul-menu {
+  box-sizing: border-box;
+  /*  width: 118px; */
+  line-height: 28px;
+  border: 1px solid #e8e8ea;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+
+  display: none;
+}
+#header .ul-menu li a {
+  padding: 0 15px;
+}
+#header .ul-menu li a:hover {
+  color: #f00;
+}
+
+.group2 ul li:nth-child(1) .ul-menu {
+  position: absolute;
+  top: 31px;
+  left: 0;
+}
+.group2 ul li:nth-child(2) .ul-menu {
+  position: absolute;
+  top: 31px;
+  left: 82px;
+}
+
+.group2 ul li:nth-child(3) .ul-menu {
+  position: absolute;
+  top: 31px;
+  left: 166px;
+}
+.group2 ul li:nth-child(4) .ul-menu {
+  position: absolute;
+  top: 31px;
+  left: 252px;
+}
+
+.group2 ul li:nth-child(5) .ul-menu {
+  position: absolute;
+  top: 31px;
+  right: 53px;
+}
+
+.father:hover .ul-menu {
+  display: block;
+}
+
+/* logo */
+.lsc {
+  height: 100px;
+  line-height: 100px;
+  z-index: 10;
+  position: relative;
+}
+
+.lsc form,
+.lsc a {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.lsc img {
+  vertical-align: middle;
+}
+.lsc input {
+  width: 479px;
+  height: 36px;
+  line-height: 36px;
+  margin-left: 330px;
+  padding-left: 15px;
+  border-radius: 24px 0 0 24px;
+  border: 1px solid red;
+}
+
+.lsc form span {
+  position: relative;
+  text-align: center;
+  right: 28px;
+  top: 0;
+  display: inline-block;
+  width: 50px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 24px;
+  background-color: red;
+  border: 1px solid red;
+}
+.lsc form span img {
+  width: 24px;
+  height: 24px;
+}
+.lsc .car {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-left: 940px;
+  width: 106px;
+  border: 1px solid #000;
+
+  border-radius: 24px;
+  border: 1px solid red;
+  height: 36px;
+  text-align: center;
+}
+
+.lsc .car a:hover {
+  color: red;
+}
+
+/*  选项卡 */
+#header .tab-car {
+ min-width: 1126px;
+  height: 41px;
+  overflow: hidden;
+}
+#header .tab-left {
+  width: 164px;
+  height: 41px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 41px;
+  font-weight: bold;
+  /*     background-color: #f00; */
+  background: linear-gradient(90deg, #f00, #ff3264);
+}
+#header .tab-left img {
+  width: 15px;
+  height: 12px;
+  margin: 0 24px 0 15px;
+}
+
+.tab-right a {
+  position: relative;
+  height: 41px;
+  line-height: 41px;
+  color: #333;
+  padding: 0 18px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.tab-right a:nth-child(1) {
+  color: #ff1e32;
+}
+.tab-right a:hover {
+  color: #ff1e32;
+}
+#header {
+  border-bottom: 1px solid #ccc;
+}
+

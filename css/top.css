@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* 居中效果 */
+#top {
+  width: 100%;
+  height: 505px;
+}
+.top {
+  width: 1126px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+.navitm-cats {
+  width: 164px;
+  line-height: 41px;
+  box-sizing: border-box; /* 
+  background-color: #f00; */
+
+  background: linear-gradient(90deg, #f00, #ff3264);
+}
+
+.navitm-cats ul li a {
+  margin: 0 24px 0 15px;
+  color: #fff;
+  font-weight: bold;
+}
+.navitm-cats ul li:hover {
+  position: relative;
+  line-height: 41px;
+  background-color: #fff;
+}
+.navitm-cats ul .show:hover + .top-cats {
+  display: block;
+}
+.navitm-cats ul li img {
+  vertical-align: middle;
+}
+.navitm-cats ul li a:hover {
+  color: red;
+}
+#top .navitm-cats ul li img {
+  background-color: red;
+}
+#top .arrow-right {
+  font-size: 14px;
+  margin-left: 25px;
+}
+#top .menu-text {
+  margin-left: 10px;
+}
+
+/* 导航内容区域 S*/
+#top .top-cats {
+  position: absolute;
+  top: 0;
+  width: 960px;
+  left: 164px;
+  height: 487px;
+  border: 1px solid red;
+  background-color: #fff;
+}
+
+.center-right,
+.center-left,
+.bottom-left,
+.right-top,
+.left-top {
+  display: inline-block;
+
+  position: relative;
+  top: 0;
+  vertical-align: top;
+  line-height: 14px;
+  padding: 0 10px;
+
+  font-size: 13px;
+}
+.title-text {
+  line-height: 34px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  padding-left: 15px;
+  width: 300px;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+}
+.top-right-img {
+  background-color: yellow;
+  width: 237px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.tlrc {
+  box-sizing: border-box;
+
+  width: 724px; /* 
+  height: 100%; */
+  overflow: hidden;
+}
+#top .tlrc a {
+  float: left;
+  color: #666;
+  margin-left: 15px;
+  padding: 10px 10px;
+}
+#top .tlrc a:hover {
+  text-decoration: underline #ccc;
+}
+.right-top,
+.left-top {
+  width: 342px;
+}
+
+.center-right,
+.center-left {
+  width: 358px;
+  position: absolute;
+  top: 40%;
+  font-size: 13px;
+}
+.center-right {
+  left: 0;
+}
+.center-left {
+  left: 342px;
+}
+.bottom-left {
+  position: absolute;
+  top: 420px;
+  left: 0;
+  font-size: 13px;
+}
+.bottom-left a {
+  float: left;
+  margin-left: 15px;
+  padding: 10px 10px;
+}
+
+/* 首页 100vh --> footer */
+.top-footer {
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.top-footer a {
+  margin-right: 20px;
+  color: #fff;
+}
+.circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 10px 7px 10px 0;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  vertical-align: middle;
+}
+.po-right {
+  position: absolute;
+  right: 10px;
+}
+
+/* 隐藏 menu 的右侧内容区域*/
+.top-cats {
+  display: none;
+}
+
+.carousel {
+  position: absolute;
+  top: 171px;
+  width: 100%;
+  height: 533px;
+  z-index: -1;
+  background: url("../access/img/top-banner/banner01.jpg");
+
+  animation: carousel 8s infinite linear;
+}
+@keyframes carousel {
+  0% {
+    background-image: url("https://gitee.com/wang_hong_bin/pic-go-photos/raw/master/banner01.jpg");
+  }
+  50% {
+    background-image: url("https://gitee.com/wang_hong_bin/pic-go-photos/raw/master/banner02.png");
+  }
+  100% {
+    background-image: url("https://gitee.com/wang_hong_bin/pic-go-photos/raw/master/banner03.png");
+  }
+}
+
+/* 实现 .show:hover*/
+.navitm-cats:hover+.top-cats{
+    display: block;
+}
